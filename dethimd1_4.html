@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<canvas id="canvas" width="400" height="300" style="border: 1px solid olivedrab"></canvas>
+</body>
+</html>
+<script>
+  class rectangle {
+    x;
+    y;
+    width;
+    height;
+    color;
+    constructor(x, y, width, height, color) {
+      this.x = x
+      this.y = y
+      this.width = width
+      this.height = height
+      this.color = color
+    }
+    render(canvas) {
+      let ctx = canvas.getContext("2d")
+      ctx.fillStyle = this.color;
+      ctx.fillRect(this.x, this.y, this.width, this.height, this.color)
+    }
+  }
+    let canvas = document.getElementById("canvas")
+  let rect1 = new rectangle(50, 50, 200, 100, '#000000')
+  rect1.render(canvas)
+
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [1, 2, 3, 4, 5, 6]
+    let array1 = [];
+    function insertNumberToArray(array, x, index,array1) {
+        if (index < 0 || index > array.length) {
+            alert(array);
+        } else {
+            for (let i = 0; i < array.length+1; i++) {
+                if (i < index) {
+                    array1.push(array[i])
+                } else {
+                    if (i == index) {
+                        array1.push(x)
+                    } else {
+                        array1.push(array[i - 1])
+                    }
+                }
+            }
+        }
+        return array1;
+    }
+    alert(insertNumberToArray(a, 8, 1,array1))
+</script>
+</body>
+</html>

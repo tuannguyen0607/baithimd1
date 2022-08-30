@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>trang phim</title>
+    <link rel="stylesheet" href="case.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="module1.js"></script>
+    <style>
+        body {
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAL4AAAEKCAMAAACbhh94AAAAA1BMVEWAgH7KceIqAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwZxnYAAWbW3BEAAAAASUVORK5CYII=");
+        }
+    </style>
+</head>
+<body>
+<div class="top logo">
+    <img src="https://motchill.com/motchill.png?v1.0.2" width="300" height="100" style="margin-left:195px">
+    <div class="login">
+        <ul>
+            <li><i class="fa fa-sign-in"></i><a onclick="alert('Chức năng này đang cập nhật');return false;">Đăng
+                nhập</a></li>
+            <li><i class="fa fa-users"></i><a onclick="alert('Chức năng này đang cập nhật');return false;">Đăng ký</a>
+            </li>
+            <li><i class="fa fa-bookmark-o"></i><a
+                    onclick="alert('Chức năng này đang cập nhật');return false;">Bookmark</a></li>
+        </ul>
+    </div>
+
+</div>
+<div  class="timkiem">
+    <input type="text" id="timKiem" style="height: 24px" size="60px" placeholder="Tìm kiếm tên phim ,tên diễn viên...">
+    <i class="fa fa-search" onclick="demo()"></i>
+</div>
+<div class="menutren">
+    <ul class="menungang">
+        <li><a href="#" onclick="hienThi()">TRANG CHỦ</a></li>
+        <li class="dropdown">
+            <a href="#">THỂ LOẠI</a>
+            <ul class="dropdown-content">
+                <li><a onclick="hanhdong('hanhDong')" href="#">Hành Động</a></li>
+                <li><a onclick="hanhdong('tinhCam')" href="#">Tình Cảm</a></li>
+                <li><a onclick="hanhdong('kinhDi')" href="#">Kinh Dị</a></li>
+                <li><a onclick="hanhdong('hoatHinh')" href="#">Hoạt Hình</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#">QUỐC GIA</a>
+            <ul class="dropdown-content">
+                <li><a onclick="hanhdong('hanhDong')" href="#">Việt Nam</a></li>
+                <li><a onclick="hanhdong('tinhcam')" href="#">Hàn Quốc</a></li>
+                <li><a onclick="hanhdong('hanhDong')" href="#">Trung Quốc</a></li>
+                <li><a onclick="hanhdong('tinhCam')" href="#">Nhật Bản</a></li>
+                <li><a onclick="hanhdong('hanhDong')" href="#">Ấn Độ</a></li>
+                <li><a onclick="hanhdong('tinhCam')" href="#">Âu - Mỹ</a></li>
+                <li><a onclick="hanhdong('hanhDong')" href="#">Canada</a></li>
+                <li><a onclick="hanhdong('tinhCam')" href="#">Hồng Kông</a></li>
+                <li><a onclick="hanhdong('hanhDong')" href="#">Thái Lan</a></li>
+            </ul>
+        </li>
+        <li><a href="#">PHIM CHIẾU RẠP</a></li>
+        <li class="dropdown">
+            <a href="#">PHIM LẺ</a>
+            <ul class="dropdown-content">
+                <li><a onclick="hanhdong('tinhCam')" href="#">Phim Lẻ 2022</a></li>
+                <li><a onclick="hanhdong('hanhDong')" href="#">Phim Lẻ 2021</a></li>
+                <li><a onclick="hanhdong('tinhCam')" href="#">Phim Lẻ 2020</a></li>
+                <li><a onclick="hanhdong('hanhDong')" href="#">Phim Lẻ 2019</a></li>
+                <li><a onclick="hanhdong('tinhcam')" href="#">Phim Lẻ 2018</a></li>
+                <li><a onclick="hanhdong('hanhDong')" href="#">Phim Lẻ 2017</a></li>
+                <li><a onclick="hanhdong('tinhCam')" href="#">Phim Lẻ 2016</a></li>
+                <li><a onclick="hanhdong('hanhDong')" href="#">Phim Lẻ 2015</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#">PHIM BỘ</a>
+            <ul class="dropdown-content">
+                <li><a href="#">Phim Bộ Việt Nam</a></li>
+                <li><a href="#">Phim Bộ Hàn Quốc</a></li>
+                <li><a href="#">Phim Bộ Trung Quốc</a></li>
+                <li><a href="#">Phim Bộ Nhật Bản</a></li>
+                <li><a href="#">Phim Bộ Ấn Độ</a></li>
+                <li><a href="#">Phim Bộ Âu - Mỹ</a></li>
+                <li><a href="#">Phim Bộ Canada</a></li>
+                <li><a href="#">Phim Bộ Hồng Kông</a></li>
+                <li><a href="#">Phim Bộ Thái Lan</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#">PHIM MỚI</a>
+            <ul class="dropdown-content">
+                <li><a href="#">Phim 2022</a></li>
+                <li><a href="#">Phim 2021</a></li>
+                <li><a href="#">Phim 2020</a></li>
+                <li><a href="#">Phim 2019</a></li>
+                <li><a href="#">Phim 2018</a></li>
+                <li><a href="#">Phim 2017</a></li>
+                <li><a href="#">Phim 2016</a></li>
+                <li><a href="#">Phim 2015</a></li>
+            </ul>
+        </li>
+        <li><a href="#">TV SHOW</a></li>
+    </ul>
+</div>
+<div>
+    <h2 class="text" STYLE="color: red">PHIM HOT</h2>
+    <div id="show">
+        <div>
+            <div
+                    class="img" style="float: left"><a target="_blank"
+                                                       href="https://motphimtv.info/xem-phim/thuong-lan-quyet-tap-1-vjh0-10507_124695.html"><img
+                    src="https://mp-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=604800&url=https%3A%2F%2Fi0.wp.com%2Fimage.motphim.net%2Fposter%2Fthuong-lan-quyet-10499.jpg%3F1661170727"
+                    width="280px" height="350px"></a>
+                <div class="top-left">Tập 30(VietSub)</div>
+                <div class="bottom-left" style="color: red">Thương Lan Quyết</div>
+            </div>
+            <div
+                    class="img1" style="float: left"><a target="_blank"
+                                                        href="https://motphimtv.info/xem-phim/big-mouth-tap-1-10480_124572.html">
+                <img src="https://mp-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=604800&url=https%3A%2F%2Fi0.wp.com%2Fimage.motphim.net%2Fposter%2Fbig-mouth-10472.jpg%3F1661010549"
+                     width="280px" height="350px"></a>
+                <div class="top-left1">Tập 8(VietSub)</div>
+                <div class="bottom-left1" style="color: red">Big Mouth</div>
+            </div>
+            <div
+                    class="img2" style="float: left"><a target="_blank"
+                                                        href="https://motphimtv.info/xem-phim/lac-loi-duoi-long-con-luan-tap-1-10471_124483.html">
+                <img src="https://mp-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=604800&url=https%3A%2F%2Fi0.wp.com%2Fimage.motphim.net%2Fposter%2Flac-loi-duoi-long-con-luan-10463.jpg%3F1660997802"
+                     width="280px" height="350px"></a>
+                <div class="top-left2">Tập 36/36(VietSub)</div>
+                <div class="bottom-left2" style="color: red">Lạc Lối Dưới Lòng Côn Luân</div>
+            </div>
+            <div
+                    class="img3" style="float: left"><a target="_blank"
+                                                        href="https://motphimtv.info/xem-phim/tinh-han-xan-lan-tap-1-10306_123505.html"><img
+                    src="https://mp-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=604800&url=https%3A%2F%2Fi0.wp.com%2Fimage.motphim.net%2Fposter%2Ftinh-han-xan-lan-10298.jpg%3F1660981253"
+                    width="280px" height="350px"></a>
+                <div class="top-left3">Tập 56/56(VietSub)</div>
+                <div class="bottom-left3" style="color: red">Tinh Hán Xán Lạn</div>
+            </div>
+            <div class="img4" style="float: left"><a target="_blank"
+                                                     href="https://motphimtv.info/xem-phim/cuoi-truoc-yeu-sau-tap-1-10517_124802.html">
+                <img src="https://mp-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=604800&url=https%3A%2F%2Fi0.wp.com%2Fimage.motphim.net%2Fposter%2Fcuoi-truoc-yeu-sau-10509.jpg%3F1661274878"
+                     width="270px" height="350px"></a>
+                <div class="top-left4">Full 24/24(VietSub)</div>
+                <div class="bottom-left4" style="color: red">Cưới Trước Yêu Sau</div>
+            </div>
+        </div>
+        <div>
+            <div class="img5" style="float:left">
+                <a target="_blank" href="https://motphimtv.info/xem-phim/la-em-tap-1-10458_124357.html">
+                    <img src="https://mp-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=604800&url=https%3A%2F%2Fi0.wp.com%2Fimage.motphim.net%2Fposter%2Fla-em-10450.jpg%3F1661447871"
+                         width="280px" height="350px"></a>
+                <div class="top-left5">Tập 12(VietSub)</div>
+                <div class="bottom-left5" style="color: red">Là Em 2022</div>
+            </div>
+            <div
+                    class="img6" style="float: left"><a target="_blank"
+                                                        href="https://motphimtv.info/xem-phim/khong-khi-tinh-yeu-tap-1-10537_124972.html">
+                <img src="https://mp-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=604800&url=https%3A%2F%2Fi0.wp.com%2Fimage.motphim.net%2Fposter%2Fkhong-khi-tinh-yeu-10529.jpg%3F1661447827"
+                     width="280px" height="350px"></a>
+                <div class="top-left6">Tập 2(VietSub)</div>
+                <div class="bottom-left6" style="color: red">Không Khí Tình yêu 2022</div>
+            </div>
+            <div
+                    class="img7" style="float: left"><a target="_blank"
+                                                        href="https://motphimtv.info/xem-phim/hen-ho-chon-cong-so-tap-1-9937_120655.html">
+                <img src="https://mp-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=604800&url=https%3A%2F%2Fi0.wp.com%2Fimage.motphim.net%2Fposter%2Fhen-ho-chon-cong-so-9929.jpg%3F1649485677"
+                     width="280px" height="350px"></a>
+                <div class="top-left7">Full 12/12 VietSub</div>
+                <div class="bottom-left7" style="color: red">Hẹn Hò Chốn Công Sở</div>
+            </div>
+            <div
+                    class="img8" style="float: left"><a target="_blank"
+                                                        href="https://motphimtv.info/xem-phim/hay-noi-cho-toi-dieu-uoc-cua-ban-tap-1-10516_124777.html">
+                <img src="https://mp-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=604800&url=https%3A%2F%2Fi0.wp.com%2Fimage.motphim.net%2Fposter%2Fhay-noi-cho-toi-dieu-uoc-cua-ban-10508.jpg%3F"
+                     width="280px" height="350px"></a>
+                <div class="top-left8">Tập 6 VietSub</div>
+                <div class="bottom-left8" style="color: red">Cho Tôi Điều Ước Của Bạn</div>
+            </div>
+            <div
+                    class="img9" style="float: left"><a target="_blank"
+                                                        href="https://motphimtv.info/xem-phim/running-man-tap-1-10_28.html">
+                <img src="https://mp-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=604800&url=https%3A%2F%2Fi0.wp.com%2Fimage.motphim.net%2Fposter%2Frunning-man-2.jpg%3F"
+                     width="270px" height="350px"></a>
+                <div class="top-left9">Tập 617 Vietsub</div>
+                <div class="bottom-left9" style="color: red">RUNNING MAN</div>
+            </div>
+            <div
+                    class="img10" style="float: left"><a target="_blank"
+                                                         href="https://motphimtv.info/xem-phim/dia-nguc-doc-than-tap-1-9714_119058.html">
+                <img src="https://mp-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=604800&url=https%3A%2F%2Fi0.wp.com%2Fimage.motphim.net%2Fposter%2Fdia-nguc-doc-than-9706.jpg%3F"
+                     width="280px" height="350px"></a>
+                <div class="top-left10">Full 8/8 Vietsub</div>
+                <div class="bottom-left10" style="color: red">ĐỊA NGỤC ĐỘC THÂN</div>
+            </div>
+        </div>
+    </div>
+
+    <table>
+        <tr>
+            <td id="phimsapchieu" style="font-size:70px"> Phim Sắp chiếu</td>
+        </tr>
+        <tr>
+            <td>
+                <img src="https://mp-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=604800&url=https%3A%2F%2Fi0.wp.com%2Fimage.motphim.net%2Fposter%2Fdinh-luat-8020-cua-tinh-yeu-10297.jpg%3F1655875806"
+                     width="100px" height="150px">
+            </td>
+            <td>
+                <img src="https://mp-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=604800&url=https%3A%2F%2Fi0.wp.com%2Fimage.motphim.net%2Fposter%2Fninh-an-nhu-mong-10442.jpg%3F1658205084"
+                     width="100px" height="150px">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="https://mp-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=604800&url=https%3A%2F%2Fi0.wp.com%2Fimage.motphim.net%2Fposter%2Fninh-an-nhu-mong-10442.jpg%3F1658205084"
+                     width="100px" height="150px">
+            </td>
+            <td>
+                <img src="https://mp-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=604800&url=https%3A%2F%2Fi0.wp.com%2Fimage.motphim.net%2Fposter%2Fninh-an-nhu-mong-10442.jpg%3F1658205084"
+                     width="100px" height="150px">
+            </td>
+        </tr>
+
+    </table>
+</div>
+
+
+<footer class="ketbai" style="background: #FFA07A">
+    <p id="footer" style="margin-left: 300px">Xem phim hay miễn phí chất lượng cao với phụ đề tiếng việt - thuyết minh -
+        lồng tiếng.<br> Mọt phim có nhiều thể loại phim phong phú, đặc sắc, nhiều bộ phim hay nhất - mới nhất.<br>
+
+        Website MọtPhimTV với giao diện trực quan, thuận tiện, tốc độ tải nhanh, <br>với độ tin cậy cao hứa hẹn sẽ đem
+        lại những trải nghiệm tốt nhất cho người dùng.</p>
+    <ul id="footer1" style="background: dimgrey">
+        <li>Điều Khoản chung</li>
+        <li>Chính Sách Riêng Tư</li>
+        <li>Trang Chủ</li>
+        <li>FaceBook</li>
+    </ul>
+</footer>
+</body>
+</html>
